@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import ProductCardMobile from './components/ProductCardMobile.vue'
+</script>
 <template>
-  <div>Oleg Rõbnikov Web Development</div>
+  <div class="flex h-screen items-center wheelsBackground">
+    <ProductCardMobile />
+  </div>
 </template>
