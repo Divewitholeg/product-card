@@ -11,10 +11,10 @@ defineProps<{
 </script>
 <template>
   <div
-    class="flex items-center mx-auto px-1 h-[20vh] w-[80vw] bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 rounded-lg transform -rotate-6 shadow-slate-500 shadow-lg"
+    class="flex items-center mx-auto px-1 h-[70vh] w-[80vw] bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 rounded-lg shadow-slate-500 shadow-lg"
   >
     <div
-      class="relative mx-auto [&>div]:my-3 [&>div]:leading-7 h-[18vh] w-[75vw] bg-gradient-to-r from-rose-100 to-teal-100 shadow-white shadow-inner rounded-lg"
+      class="overflow-y-scroll relative mx-auto [&>div]:my-3 [&>div]:leading-7 h-[68vh] w-[75vw] bg-gradient-to-r from-rose-100 to-teal-100 shadow-white shadow-inner rounded-lg"
     >
       <div
         class="animate-[bounce_0.5s_ease-in] font-semibold font-sans px-2 -indent-2"
@@ -23,11 +23,11 @@ defineProps<{
         <span
           class="text-xl tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500 px-2"
         >
-          {{ prod.slogan }}
+          {{ prod.title }}
         </span>
       </div>
-      <div class="text-lg ml-5 font-extralight">
-        {{ prod.price.slice(-13) }}
+      <div v-for="p in prod.text" :key="p" class="p-2 m-2">
+        <p>{{ p }}</p>
       </div>
     </div>
   </div>
