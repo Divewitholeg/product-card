@@ -11,12 +11,10 @@ defineProps<{
 }>()
 </script>
 <template>
-  <ProductCardMobileLayoutVue :active="true">
+  <ProductCardMobileLayoutVue :active="false">
     <template #caption>
-      {{ prod.title }}
+      {{ prod.slogan }}
     </template>
-    <template #text
-      ><div v-for="p in prod.text" :key="p" class="m-2 p-2">{{ p }}</div></template
-    >
+    <template #text>{{ prod.price.slice(-13) }}</template>
   </ProductCardMobileLayoutVue>
 </template>

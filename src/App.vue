@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ProductCardMobile from './components/ProductCardMobile.vue'
+import ProductCardMobileContracted from './components/ProductCardMobileContracted.vue'
 import ProductCardMobileExpanded from './components/ProductCardMobileExpanded.vue'
 interface Product {
   name: string
@@ -34,8 +34,13 @@ const active = ref(true)
       leave-to-class="duration-200 opacity-0 translate-y-5"
       appear
     >
-      <ProductCardMobile v-if="active" @click="active = !active" :prod="prod" />
-      <ProductCardMobileExpanded v-else @click="active = !active" :prod="prod" />
+      <ProductCardMobileContracted
+        v-if="active"
+        :active="active"
+        @click="active = !active"
+        :prod="prod"
+      />
+      <ProductCardMobileExpanded v-else :active="active" @click="active = !active" :prod="prod" />
     </Transition>
   </div>
 </template>
