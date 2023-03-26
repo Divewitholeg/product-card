@@ -2,11 +2,8 @@
 import ProductCardMobileLayoutVue from './ProductCardMobileLayout.vue'
 defineProps<{
   prod: {
-    name: string
-    title: string
     slogan: string
     price: string
-    text: string[]
   }
 }>()
 </script>

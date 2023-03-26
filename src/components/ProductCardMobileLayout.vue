@@ -20,7 +20,7 @@ defineProps<{
           <slot name="caption" />
         </span>
       </div>
-      <div :class="active ? ['text-lg', 'ml-5', 'font-extralight'] : []">
+      <div :class="{ 'text-lg ml-5 font-extralight': active }">
         <slot name="text" />
       </div>
     </div>
